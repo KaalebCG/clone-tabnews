@@ -13,7 +13,7 @@ function Home() {
             <div className="display-1" style={{ color: "#ff9900" }}>
               🚧
             </div>
-            <h1 className="display-4">OcultaB: Em Construção</h1>
+            <h1 className="display-4">Ocultab: Em Construção</h1>
             <p className="lead">
               Nosso site sobre ocultismo está sendo preparado para desvendar os
               mistérios em breve!
