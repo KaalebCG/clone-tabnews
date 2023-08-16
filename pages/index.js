@@ -1,31 +1,45 @@
 function Home() {
+  const containerStyle = {
+    backgroundColor: "#222",
+    color: "#fff",
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+  };
+
+  const emojiStyle = {
+    fontSize: "3rem",
+    color: "#ff9900",
+  };
+
+  const headingStyle = {
+    fontSize: "2.5rem",
+  };
+
+  const leadStyle = {
+    fontSize: "1.25rem",
+    margin: "1rem 0",
+  };
+
+  const contactStyle = {
+    fontSize: "1rem",
+  };
+
   return (
-    <>
-      <div
-        style={{ backgroundColor: "#222", color: "#fff", minHeight: "100vh" }}
-        className="container-fluid text-center"
-      >
-        <div
-          style={{ minHeight: "100vh" }}
-          className="row justify-content-center align-items-center"
-        >
-          <div className="col-12">
-            <div style={{ color: "#ff9900" }} className="display-1">
-              🚧
-            </div>
-            <h1 className="display-4">Ocultab: Em Construção</h1>
-            <p className="lead">
-              Nosso site sobre ocultismo está sendo preparado para desvendar os
-              mistérios em breve!
-            </p>
-            <p>
-              Enquanto isso, você pode entrar em contato conosco através do
-              email: contato@ocultab.com
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
+    <div style={containerStyle}>
+      <div style={emojiStyle}>🚧</div>
+      <h1 style={headingStyle}>Ocultab: Em Construção</h1>
+      <p style={leadStyle}>
+        Nosso site sobre ocultismo está sendo preparado para desvendar os
+        mistérios em breve!
+      </p>
+      <p style={contactStyle}>
+        Enquanto isso, você pode entrar em contato conosco através do email:
+        contato@ocultab.com
+      </p>
+    </div>
   );
 }
 
