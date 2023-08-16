@@ -2,15 +2,15 @@ function Home() {
   return (
     <>
       <div
-        className="container-fluid text-center"
         style={{ backgroundColor: "#222", color: "#fff", minHeight: "100vh" }}
+        className="container-fluid text-center"
       >
         <div
-          className="row justify-content-center align-items-center"
           style={{ minHeight: "100vh" }}
+          className="row justify-content-center align-items-center"
         >
           <div className="col-12">
-            <div className="display-1" style={{ color: "#ff9900" }}>
+            <div style={{ color: "#ff9900" }} className="display-1">
               🚧
             </div>
             <h1 className="display-4">Ocultab: Em Construção</h1>
