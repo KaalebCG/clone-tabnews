@@ -9,33 +9,18 @@ async function query(queryObject) {
     password: process.env.POSTGRES_PASSWORD,
   });
 
-  await client.connect();
-  const result = await client.query(queryObject);
-  await client.end();
-
-  return result;
-}
-
-async function getVersion() {
-  const version = await query("SELECT version();");
-  return version.rows[0].version;
-}
-
-async function getActiveConnections() {
-  const connections = await query("SELECT COUNT(*) from pg_stat_activity;");
-  return connections.rows[0].count;
-}
-
-async function getMaxConnections() {
-  const max_connections = await query(
-    "SELECT * FROM pg_settings WHERE name = 'max_connections'",
-  );
-  return max_connections.rows[0].setting;
+  try {
+    await client.connect();
+    const result = await client.query(queryObject);
+    return result;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  } finally {
+    await client.end();
+  }
 }
 
 export default {
   query: query,
-  getVersion: getVersion,
-  getActiveConnections: getActiveConnections,
-  getMaxConnections: getMaxConnections,
 };
